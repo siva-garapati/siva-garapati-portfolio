@@ -26,7 +26,7 @@ export default function Hero() {
                 className="absolute inset-0 -z-20"
             >
                 {/* Grid Lines */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.1)_2px,transparent_2px),linear-gradient(to_bottom,rgba(0,0,0,0.1)_2px,transparent_2px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_2px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_2px,transparent_2px)] [background-size:80px_80px]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.1)_2px,transparent_2px),linear-gradient(to_bottom,rgba(0,0,0,0.1)_2px,transparent_2px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_2px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_2px,transparent_2px)] [background-size:40px_40px] md:[background-size:80px_80px]" />
 
                 {/* Fade to edges */}
                 {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.6)_100%)] dark:bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.6)_100%)]" /> */}
@@ -70,7 +70,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4"
+                        className="text-4xl sm:text-6xl md:text-7xl font-bold mb-4"
                     >
                         Siva Garapati
                     </motion.h1>
@@ -85,7 +85,7 @@ export default function Hero() {
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gradient">
                             Full Stack Developer
                         </h2>
-                        <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent glow-orange" />
+                        <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent glow-orange" />
                     </motion.div>
 
                     {/* Description */}
@@ -93,10 +93,9 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
-                        className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8"
+                        className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8"
                     >
-                        I build modern web applications with the MERN stack and a focus on
-                        simplicity and performance.
+                        Bringing ideas to life through intelligent, interactive web experiences
                     </motion.p>
 
                     {/* Skill Logos */}
@@ -104,7 +103,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
-                        className="flex flex-wrap justify-center gap-4 mb-10"
+                        className="flex flex-wrap justify-center gap-4 mb-6 md:mb-10"
                     >
                         {skills.map((skill) => (
                             <motion.div
@@ -127,27 +126,38 @@ export default function Hero() {
                         ))}
                     </motion.div>
 
-                    {/* Buttons */}
+                    {/* Buttons Section */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
-                        className="flex flex-wrap justify-center gap-4 mb-16"
+                        className="flex flex-wrap justify-center gap-4 mb-8 md:mb-16"
                     >
-                        <button className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-orange-500/30">
+                        {/* Download Resume */}
+                        <button
+                            className="flex items-center gap-2 px-6 py-2 rounded-md font-medium
+               bg-black text-white dark:bg-white dark:text-black
+               hover:bg-orange-500 hover:text-white transition-all duration-300"
+                        >
                             <Download className="w-5 h-5" />
                             Download Resume
                         </button>
+
+                        {/* Let's Work Together */}
                         <button
                             onClick={() =>
                                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                             }
-                            className="flex items-center gap-2 border border-orange-500 text-orange-400 hover:bg-orange-500/10 px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                            className="flex items-center gap-2 px-6 py-2 rounded-md font-medium
+               border border-orange-500 text-orange-500 dark:border-orange-400 dark:text-orange-400
+               hover:bg-orange-500/20 hover:backdrop-blur-md transition-all duration-300"
                         >
                             <Handshake className="w-5 h-5" />
                             Let's Work Together
                         </button>
                     </motion.div>
+
+
 
                     {/* Scroll Indicator */}
                     <motion.button
