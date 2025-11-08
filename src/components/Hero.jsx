@@ -1,5 +1,6 @@
 import { Download, Handshake, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import resumeFile from "../assets/siva_garapati.pdf";
 
 const skills = [
     { name: "MongoDB", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
@@ -134,14 +135,16 @@ export default function Hero() {
                         className="flex flex-wrap justify-center gap-4 mb-8 md:mb-16"
                     >
                         {/* Download Resume */}
-                        <button
+                        <a
+                            href={resumeFile}
+                            download="siva-garapati-resume.pdf"
                             className="flex items-center gap-2 px-6 py-2 rounded-md font-medium
-               bg-black text-white dark:bg-white dark:text-black
-               hover:bg-orange-500 hover:text-white transition-all duration-300"
+             bg-black text-white dark:bg-white dark:text-black
+             hover:bg-orange-500 hover:text-white transition-all duration-300"
                         >
                             <Download className="w-5 h-5" />
                             Download Resume
-                        </button>
+                        </a>
 
                         {/* Let's Work Together */}
                         <button
