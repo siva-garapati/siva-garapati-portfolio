@@ -11,8 +11,8 @@ const App = () => {
       <div>
         <NavBar />
         <Hero />
-        {/* <Projects/>
-        <Skills/> */}
+        <Projects/>
+        {/* <Skills/> */}
       </div>
     </ThemeProvider>
   )
