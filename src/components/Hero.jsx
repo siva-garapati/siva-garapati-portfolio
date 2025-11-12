@@ -17,7 +17,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+            className="min-h-screen flex items-center justify-center relative overflow-hidden pt-14"
         >
             {/* === Animated Grid Background === */}
             <motion.div
@@ -159,8 +159,6 @@ export default function Hero() {
                             Let's Work Together
                         </button>
                     </motion.div>
-
-
 
                     {/* Scroll Indicator */}
                     <motion.button

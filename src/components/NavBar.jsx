@@ -52,7 +52,7 @@ export default function NavBar() {
                         className="text-xl font-bold"
                         whileHover={{ scale: 1.05 }}
                     >
-                        <span className="text-gradient">Siva Garapati</span>
+                        <span className="bg-orange-500 text-white p-1 rounded-[6px]">SG</span>
                     </motion.a>
 
                     {/* Desktop Navigation */}
@@ -151,7 +151,7 @@ export default function NavBar() {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={() => setTimeout(() => setIsOpen(false), 1000)}
                                     className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${activeSection === link.href.replace("#", "")
                                             ? "bg-accent/10 text-accent"
                                             : "hover:bg-accent/10 hover:text-accent"

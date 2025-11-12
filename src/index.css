@@ -110,3 +110,19 @@ All colors MUST be HSL.
     box-shadow: 0 0 40px hsl(var(--orange) / 0.5);
   }
 }
+
+/* Hide scrollbar but keep scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}

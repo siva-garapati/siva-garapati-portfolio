@@ -40,15 +40,15 @@ function ProjectCard({ project, index }) {
             viewport={{ once: true }}
             transition={{ delay: index * 0.2 }}
             className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } gap-6 lg:gap-12 items-center`}
+                } gap-6 sm:gap-8 lg:gap-12 items-center lg:p-0 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm lg:border-0 lg:bg-transparent lg:backdrop-blur-none`}
         >
             {/* Project Image */}
             <div className="w-full lg:w-1/2">
-                <div className="relative rounded-2xl overflow-hidden">
+                <div className="relative rounded-xl lg:rounded-2xl overflow-hidden">
                     <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-[200px] sm:h-[300px] object-cover"
+                        className="w-full h-[180px] border-b-2 lg:border-b-0 sm:h-[340px] lg:h-[300px] object-cover"
                     />
 
                     {/* Overlay Buttons - Mobile Only */}
@@ -74,17 +74,17 @@ function ProjectCard({ project, index }) {
             </div>
 
             {/* Project Info */}
-            <div className="w-full lg:w-1/2 space-y-4 lg:space-y-6">
+            <div className="w-full lg:w-1/2 space-y-3 sm:space-y-4 lg:space-y-6 px-3 pb-3 lg:px-0 lg:pb-0">
                 <motion.div
                     initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.2 + 0.2 }}
-                    className="space-y-4 lg:space-y-6"
+                    className="space-y-3 sm:space-y-4 lg:space-y-6"
                 >
-                    <h3 className="text-2xl lg:text-3xl font-bold">{project.title}</h3>
+                    <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold">{project.title}</h3>
 
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
                         {project.description}
                     </p>
 
@@ -93,7 +93,7 @@ function ProjectCard({ project, index }) {
                         {project.tech.map((tech) => (
                             <span
                                 key={tech}
-                                className="px-3 py-1 rounded-full text-sm font-medium glass"
+                                className="px-2.5 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium glass"
                             >
                                 {tech}
                             </span>
@@ -101,12 +101,12 @@ function ProjectCard({ project, index }) {
                     </div>
 
                     {/* Action Buttons - Hidden on Mobile (overlay buttons used instead) */}
-                    <div className="hidden lg:flex gap-4">
+                    <div className="hidden lg:flex gap-3 lg:gap-4">
                         <a
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md text-sm font-medium bg-accent hover:bg-accent/90 text-white transition-all duration-300"
+                            className="inline-flex items-center justify-center gap-2 h-9 lg:h-10 px-3 lg:px-4 py-2 rounded-md text-sm font-medium bg-accent hover:bg-accent/90 text-white transition-all duration-300"
                         >
                             <ExternalLink className="w-4 h-4" />
                             Live Demo
@@ -115,7 +115,7 @@ function ProjectCard({ project, index }) {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md text-sm font-medium border border-accent bg-background text-accent hover:bg-accent/10 transition-all duration-300"
+                            className="inline-flex items-center justify-center gap-2 h-9 lg:h-10 px-3 lg:px-4 py-2 rounded-md text-sm font-medium border border-accent bg-background text-accent hover:bg-accent/10 transition-all duration-300"
                         >
                             <Github className="w-4 h-4" />
                             GitHub
@@ -129,25 +129,25 @@ function ProjectCard({ project, index }) {
 
 export function Projects() {
     return (
-        <section id="projects" className="py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="projects" className="pt-20 sm:py-16 lg:py-24">
+            <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-8 sm:mb-16"
+                    className="text-center mb-8 sm:mb-12 lg:mb-16"
                 >
-                    <h2 className="text-3xl sm:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
                         Featured <span className="text-gradient">Projects</span>
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    <p className="text-muted-foreground text-xs sm:text-lg max-w-2xl mx-auto px-1">
                         A showcase of my recent work and personal projects
                     </p>
                 </motion.div>
 
                 {/* Projects List */}
-                <div className="space-y-16">
+                <div className="space-y-8 sm:space-y-12 lg:space-y-24">
                     {projects.map((project, index) => (
                         <ProjectCard key={project.title} project={project} index={index} />
                     ))}
