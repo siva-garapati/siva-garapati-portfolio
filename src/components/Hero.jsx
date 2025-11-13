@@ -17,7 +17,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="min-h-screen flex items-center justify-center relative overflow-hidden pt-14"
+            className="min-h-screen flex items-center justify-center relative overflow-hidden pt-10"
         >
             {/* === Animated Grid Background === */}
             <motion.div
