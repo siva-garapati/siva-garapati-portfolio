@@ -44,7 +44,7 @@ export function Skills() {
     const blackIcons = ['express.js', 'flask', 'vercel', 'render', 'socket.io', 'github']
 
     return (
-        <section id="skills" className="pt-20 sm:py-10 lg:py-14">
+        <section id="skills" className="py-20 sm:py-10 lg:py-14">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
