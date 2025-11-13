@@ -71,7 +71,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-4xl sm:text-6xl md:text-7xl font-bold mb-4"
+                        className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4"
                     >
                         Siva Garapati
                     </motion.h1>
@@ -104,7 +104,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
-                        className="flex flex-wrap justify-center gap-4 mb-6 md:mb-10"
+                        className="flex flex-wrap justify-center gap-4 mb-6 sm:mb-8 md:mb-10"
                     >
                         {skills.map((skill) => (
                             <motion.div
@@ -132,7 +132,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
-                        className="flex flex-wrap justify-center gap-4 mb-8 md:mb-16"
+                        className="flex flex-wrap justify-center gap-4 mb-10 sm:mb-12 md:mb-16"
                     >
                         {/* Download Resume */}
                         <a

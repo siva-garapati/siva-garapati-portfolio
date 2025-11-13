@@ -162,7 +162,7 @@ export default function NavBar() {
                             ))}
                             <div className="flex items-center justify-center space-x-4 pt-4 border-t border-border/50">
                                 <a
-                                    href="https://github.com"
+                                    href="https://github.com/siva-garapati"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-2 rounded-lg hover:bg-accent/10 hover:text-accent transition-all duration-300"
@@ -170,7 +170,7 @@ export default function NavBar() {
                                     <Github className="w-5 h-5" />
                                 </a>
                                 <a
-                                    href="https://linkedin.com"
+                                    href="https://www.linkedin.com/in/siva-garapati/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-2 rounded-lg hover:bg-accent/10 hover:text-accent transition-all duration-300"
@@ -178,7 +178,7 @@ export default function NavBar() {
                                     <Linkedin className="w-5 h-5" />
                                 </a>
                                 <a
-                                    href="https://twitter.com"
+                                    href="https://x.com/srk0804"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-2 rounded-lg hover:bg-accent/10 hover:text-accent transition-all duration-300"
